@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Hello, AMPs</title>
+    <link
+      rel="canonical"
+      href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <style amp-custom>
+      /* any custom styles go here. */
+      body {
+        background-color: white;
+        padding: 1rem;
+      }
+      h1 {
+        font-style: italic;
+      }
+      p:first-child {
+        font-style: italic;
+        font-size: large;
+        font-weight: 900;
+      }
+  
+      p:nth-child(2) {
+        font-weight: 900;
+        background-color: red;
+        color: white;
+      }
+      p:nth-child(3) {
+        font-weight: 900;
+        background-color: black;
+        color: white;
+      }
+      amp-img {
+        border: 5px solid grey;
+      }
+
+      amp-img.grey-placeholder {
+        background-color: grey;
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Article headline",
+        "image": ["thumbnail1.jpg"],
+        "datePublished": "2015-02-05T08:00:00+08:00"
+      }
+    </script>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript
+      ><style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style></noscript
+    >
+  </head>
+  <body>
+    <h1>Natural Health Way</h1>
+   
+      <p
+        >The Therapies Recommended On This Categories of Aliments Are Well
+        Researched With Guaranteed Results.
+        <span>Stay With Me!</span></p
+      >
+     
+      <p>
+        Note: They Are Running Out Of Stock Faster Than Imagined
+        Nationwide</p
+      >
+     <p>Free Delivery Within 78 Hours</p>
+    <amp-img
+      src="https://res.cloudinary.com/rexben/image/upload/v1576441953/Blog/hurehi99ruh4dj3fsxva.jpg"
+      alt="Welcome"
+      height="400"
+      width="400"
+      layout="responsive"
+    ></amp-img>
+  </body>
+</html>
