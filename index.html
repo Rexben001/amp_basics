@@ -1,42 +1,172 @@
 <!DOCTYPE html>
 <html amp lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <title>Hello, AMPs</title>
-    <link
-      rel="canonical"
-      href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width,minimum-scale=1,initial-scale=1"
-    />
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
     <style amp-custom>
-      /* any custom styles go here. */
-      body {
-        background-color: white;
-        position: relative;
-      }
-      nav {
-        z-index: 100;
-        position: absolute;
-        top: 10px;
-        text-align: right;
-        right: 0rem;
-        padding-top: 2rem;
-      }
-      nav a {
-        color: white;
-        padding: 1rem;
-        text-decoration: none;
-      }
+        /* any custom styles go here. */
+        
+        body {
+            background-color: white;
+            position: relative;
+            font-family: sans-serif;
+        }
 
-      .index {
-        margin-right: 45rem;
-        font-weight: bolder;
-        font-size: 1.5rem;
-      }
+        amp-img {
+            filter: blur(80%);
+            background-attachment: fixed;
+        }
+
+        .body {
+            z-index: 100;
+            position: absolute;
+            top: 10px;
+        }
+
+        nav {
+            right: 0rem;
+            padding-top: 2rem;
+        }
+
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+        }
+
+        .index {
+            margin-right: 45rem;
+            font-weight: bolder;
+            font-size: 1.5rem;
+        }
+
+        h1 {
+            margin: 14rem auto 0;
+            text-align: center;
+            font-size: 2.5rem;
+            color: white;
+            width: 40vw;
+        }
+
+        .btn {
+            margin: 0 auto;
+            width: 30vw;
+        }
+
+        .btn button {
+            padding: 1.2rem;
+            background-color: transparent;
+            color: white;
+            font-size: 1.3rem;
+            margin: 1rem;
+            text-transform: uppercase;
+            border-color: white;
+        }
+
+        .btn button:first-child {
+            background: rgb(86, 86, 218);
+            border: none;
+        }
+
+        .three-faces {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 7rem 0;
+            margin-bottom: 0;
+        }
+
+        .three-faces>div {
+            padding: 1rem 1.5rem 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: rgb(58, 57, 57);
+        }
+
+        .three-faces>div>.fas,
+        .three-faces>div>.far {
+            font-size: 3rem;
+            color: #1a57a5;
+        }
+
+        .three-faces>div>h3 {
+            color: #1a57a5;
+            font-size: 1.4rem;
+        }
+
+        .learn {
+            font-size: 1rem;
+            color: #1a57a5;
+        }
+
+        .blue-container {
+            background-color: #D6E6F2;
+        }
+
+        .blue-container>h1 {
+            padding: 3rem 0;
+            font-weight: 400;
+            font-size: 4rem;
+            color: black;
+        }
+
+        .blue-container>p {
+            margin: 0 auto;
+            width: 55%;
+            line-height: 1.7;
+            font-size: 1.15rem;
+            text-align: center;
+        }
+
+        .blue-container>div {
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            margin-top: 5rem;
+        }
+
+        .blue-container>div>div {
+            width: 50%;
+        }
+
+        .blue-container>div>div>amp-img {
+            box-shadow: 2px 2px 0px rgba(128, 128, 128, 0.226);
+        }
+
+        .blue-container div .big {
+            width: 25%;
+            margin: 0 auto;
+        }
+
+        .blue-container div .big h3 {
+            font-size: 2.7rem;
+            color: #1a57a5 !important;
+
+        }
+
+        .blue-container div .big p {
+            line-height: 1.6;
+        }
+
+        .blue-container li:before {
+            content: '✔';
+            margin-left: -1em;
+            margin-right: .500em;
+            color: #1a57a5 !important;
+        }
+
+        .blue-container ul {
+            padding-left: 20px;
+            list-style: none;
+            list-style-position: outside;
+            line-height: 1.7;
+        }
     </style>
     <script type="application/ld+json">
       {
@@ -48,80 +178,195 @@
       }
     </script>
     <style amp-boilerplate>
-      body {
-        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-      }
-      @-webkit-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @-moz-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @-ms-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @-o-keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-      @keyframes -amp-start {
-        from {
-          visibility: hidden;
-        }
-        to {
-          visibility: visible;
-        }
-      }
-    </style>
-    <noscript
-      ><style amp-boilerplate>
         body {
-          -webkit-animation: none;
-          -moz-animation: none;
-          -ms-animation: none;
-          animation: none;
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both;
         }
-      </style></noscript
-    >
-  </head>
-  <body>
-    <amp-img
-      src="https://res.cloudinary.com/rexben/image/upload/v1576441953/Blog/hurehi99ruh4dj3fsxva.jpg"
-      alt="Welcome"
-      height="200"
-      width="400"
-      layout="responsive"
-    >
-      <nav>
-        <a class="index" href="#">SHELTER</a>
-        <a href="#">HOME</a>
-        <a href="#">FEATURES</a>
-        <a href="#">PRICING</a>
-        <a href="#">REVIEWS</a>
-        <a href="#">CONTACT</a>
-      </nav>
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+
+            to {
+                visibility: visible;
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+
+            to {
+                visibility: visible;
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+
+            to {
+                visibility: visible;
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+
+            to {
+                visibility: visible;
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+
+            to {
+                visibility: visible;
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <amp-img src="https://res.cloudinary.com/rexben/image/upload/v1576441953/Blog/hurehi99ruh4dj3fsxva.jpg"
+        alt="Welcome" height="200" width="400" layout="responsive">
+        <div class="body">
+            <nav>
+                <a class="index" href="#">SHELTER</a>
+                <a href="#">HOME</a>
+                <a href="#">FEATURES</a>
+                <a href="#">PRICING</a>
+                <a href="#">REVIEWS</a>
+                <a href="#">CONTACT</a>
+            </nav>
+
+            <h1>
+                Do you need a house to live in? <br />
+                Check out list of houses available to rent or buy
+            </h1>
+            <div class="btn">
+                <button>View More</button> <button>Contact Us</button>
+            </div>
+        </div>
     </amp-img>
-  </body>
+    <div class="three-faces">
+        <div>
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Mobile Optimize</h3>
+            <p>
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts. Separated they
+                live in Bookmarksgrove right at the coast of the Semantics, a large
+                language ocean.
+            </p>
+            <p class="learn">Learn More ></p>
+        </div>
+        <div>
+            <i class="fas fa-wallet"></i>
+            <h3>Increase Revenue</h3>
+            <p>
+                A small river named Duden flows by their place and supplies it with
+                the necessary regelialia. It is a paradisematic country, in which
+                roasted parts of sentences fly into your mouth.
+            </p>
+            <p class="learn">Learn More ></p>
+        </div>
+        <div>
+            <i class="far fa-lightbulb"></i>
+            <h3>Smart Idea</h3>
+            <p>
+                Even the all-powerful Pointing has no control about the blind texts it
+                is an almost unorthographic life One day however a small line of blind
+                text by the name of Lorem Ipsum decided to leave for the far World of
+                Grammar.
+            </p>
+            <p class="learn">Learn More ></p>
+        </div>
+    </div>
+    <div class="blue-container">
+        <h1>Features</h1>
+        <p>
+            Even the all-powerful Pointing has no control about the blind texts it
+            is an almost unorthographic life One day however a small line of blind
+            text by the name of Lorem Ipsum decided to leave for the far World of
+            Grammar.
+        </p>
+        <div>
+            <div>
+                <amp-img src="./show.jpg" alt="Welcome" height="400" width="700" layout='responsive'></amp-img>
+            </div>
+            <div class="big">
+                <h3>Big Benefits for Small Business</h3>
+                <p>
+                    A small river named Duden flows by their place and supplies it with
+                    the necessary regelialia. It is a paradisematic country, in which
+                    roasted parts of sentences fly into your mouth.
+                    <ul>
+                        <li> Pointing has no control</li>
+                        <li>A small river named Duden flows </li>
+                        <li>Roasted parts of sentences fly into your mouth</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div>
+
+            <div class="big">
+                <h3>How Frame is different</h3>
+                <p>
+                    A small river named Duden flows by their place and supplies it with
+                    the necessary regelialia. It is a paradisematic country, in which
+                    roasted parts of sentences fly into your mouth.
+                    <ul>
+                        <li> Pointing has no control</li>
+                        <li>A small river named Duden flows </li>
+                        <li>Roasted parts of sentences fly into your mouth</li>
+                    </ul>
+                </p>
+            </div>
+            <div>
+                <amp-img src="./show.jpg" alt="Welcome" height="400" width="700" layout='responsive'></amp-img>
+            </div>
+        </div>
+        <div>
+            <div>
+                <amp-img src="./show.jpg" alt="Welcome" height="400" width="700" layout='responsive'></amp-img>
+            </div>
+            <div class="big">
+                <h3>All in One Place</h3>
+                <p>
+                    A small river named Duden flows by their place and supplies it with
+                    the necessary regelialia. It is a paradisematic country, in which
+                    roasted parts of sentences fly into your mouth.
+                    <ul>
+                        <li> Pointing has no control</li>
+                        <li>A small river named Duden flows </li>
+                        <li>Roasted parts of sentences fly into your mouth</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
