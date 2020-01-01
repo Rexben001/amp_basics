@@ -16,33 +16,26 @@
       /* any custom styles go here. */
       body {
         background-color: white;
+        position: relative;
+      }
+      nav {
+        z-index: 100;
+        position: absolute;
+        top: 10px;
+        text-align: right;
+        right: 0rem;
+        padding-top: 2rem;
+      }
+      nav a {
+        color: white;
         padding: 1rem;
-      }
-      h1 {
-        font-style: italic;
-      }
-      p:first-child {
-        font-style: italic;
-        font-size: large;
-        font-weight: 900;
-      }
-  
-      p:nth-child(2) {
-        font-weight: 900;
-        background-color: red;
-        color: white;
-      }
-      p:nth-child(3) {
-        font-weight: 900;
-        background-color: black;
-        color: white;
-      }
-      amp-img {
-        border: 5px solid grey;
+        text-decoration: none;
       }
 
-      amp-img.grey-placeholder {
-        background-color: grey;
+      .index {
+        margin-right: 45rem;
+        font-weight: bolder;
+        font-size: 1.5rem;
       }
     </style>
     <script type="application/ld+json">
@@ -114,25 +107,21 @@
     >
   </head>
   <body>
-    <h1>Natural Health Way</h1>
-   
-      <p
-        >The Therapies Recommended On This Categories of Aliments Are Well
-        Researched With Guaranteed Results.
-        <span>Stay With Me!</span></p
-      >
-     
-      <p>
-        Note: They Are Running Out Of Stock Faster Than Imagined
-        Nationwide</p
-      >
-     <p>Free Delivery Within 78 Hours</p>
     <amp-img
       src="https://res.cloudinary.com/rexben/image/upload/v1576441953/Blog/hurehi99ruh4dj3fsxva.jpg"
       alt="Welcome"
-      height="400"
+      height="200"
       width="400"
       layout="responsive"
-    ></amp-img>
+    >
+      <nav>
+        <a class="index" href="#">SHELTER</a>
+        <a href="#">HOME</a>
+        <a href="#">FEATURES</a>
+        <a href="#">PRICING</a>
+        <a href="#">REVIEWS</a>
+        <a href="#">CONTACT</a>
+      </nav>
+    </amp-img>
   </body>
 </html>
