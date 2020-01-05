@@ -155,7 +155,8 @@
         }
 
         .blue-container li:before,
-        .card li::before {
+        .card li::before,
+        .try .list div li::before {
             content: '✔';
             margin-left: -1em;
             margin-right: .500em;
@@ -220,7 +221,8 @@
         }
 
         .card>button,
-        .try button {
+        .try button,
+        .join>button {
             padding: 1rem 2.5rem;
             font-size: 1rem;
             border: none;
@@ -323,13 +325,130 @@
             margin: 3rem auto;
             text-align: center;
         }
+
         /* .try > image {
             width: 50%;
             margin: 1rem auto;
             height: 100px;
             box-sizing: border-box;
         } */
-        
+        .try>.list {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 1rem auto;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+
+        .try>.list>div {
+            width: 48%;
+            margin: .1rem;
+            font-size: 1.05rem;
+        }
+
+        .list div ul {
+            margin-bottom: 1.9rem;
+            padding-left: 20px;
+        }
+
+        .list div p {
+            color: rgb(121, 121, 121);
+            line-height: 1.7;
+        }
+
+        .join {
+            background-color: #1a57a5;
+            padding: 3rem;
+            color: white;
+            text-align: center;
+        }
+
+        .join>h3 {
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+        .join>p {
+            width: 60%;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .get {
+            background-color: #D6E6F2;
+            margin-top: -1.5rem;
+            display: flex;
+            justify-content: space-around;
+            padding: 7rem;
+            box-sizing: border-box;
+        }
+
+        .get form {
+            background-color: white;
+            padding: 2rem;
+            display: block;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        form>input,
+        form>textarea,
+        form>button {
+            display: block;
+            width: 90%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        form>h3 {
+            font-weight: 400;
+            font-size: 2rem;
+        }
+
+        form>textarea {
+            height: 200px;
+            border: #ddd solid 1px;
+        }
+
+        form>button {
+            background-color: #1a57a5;
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            border: none;
+            color: white;
+            width: inherit;
+        }
+
+        .get>div {
+            width: 50%;
+            margin-left: 8rem;
+        }
+
+        .get>div>p>span {
+            display: block;
+            font-size: 1rem;
+            color: rgb(121, 121, 121);
+            padding: .5rem;
+        }
+
+        .get>div>p>span:first-child {
+            color: rgb(87, 87, 87);
+        }
+
+        footer {
+            background-color: #1a57a5;
+            text-align: center;
+            padding: 3rem;
+            color: white;
+        }
+
+        footer>div>.fab {
+            font-size: 2rem;
+            padding: .7rem;
+            color: rgba(221, 221, 221, 0.349);
+        }
     </style>
     <script type="application/ld+json">
       {
@@ -687,11 +806,13 @@
             <button>Get It Now</button>
         </div>
         <!-- <div class="image"> -->
-            <amp-img src="./laptop.jpg" alt="Welcome" height="200" width="400" layout='responsive'></amp-img>
+        <amp-img src="./laptop.jpg" alt="Welcome" height="200" width="400" layout='responsive'></amp-img>
         <!-- </div> -->
         <div class="list">
             <div>
-                <li>What is Instant?</li>
+                <ul>
+                    <li>What is Instant?</li>
+                </ul>
                 <p> Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic
                     life
                     One
@@ -700,7 +821,9 @@
                     Grammar.</p>
             </div>
             <div>
-                <li>What is Instant?</li>
+                <ul>
+                    <li>What is Instant?</li>
+                </ul>
                 <p> Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic
                     life
                     One
@@ -709,7 +832,9 @@
                     Grammar.</p>
             </div>
             <div>
-                <li>What is Instant?</li>
+                <ul>
+                    <li>What is Instant?</li>
+                </ul>
                 <p> Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic
                     life
                     One
@@ -718,7 +843,9 @@
                     Grammar.</p>
             </div>
             <div>
-                <li>What is Instant?</li>
+                <ul>
+                    <li>What is Instant?</li>
+                </ul>
                 <p> Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic
                     life
                     One
@@ -735,7 +862,7 @@
             for their.</p>
         <button>Get Started</button>
     </div>
-    <div class="blue-container">
+    <div class="get">
         <form>
             <h3>Get In Touch</h3>
             <input placeholder="Your Name" />
@@ -767,14 +894,14 @@
     </div>
     <footer>
         <div>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-linkedin"></i>
+            <span class="fab fa-twitter"></span>
+            <span class="fab fa-facebook"></span>
+            <span class="fab fa-instagram"></span>
+            <span class="fab fa-linkedin"></span>
         </div>
-        <p>© 2019 Frame. All Rights Reserved.
+        <p>© 2020 Shelter. All Rights Reserved.
         </p>
-        <p>Designed & Bootstrap templates by uiCookies
+        <p>Designed by Rexben
         </p>
     </footer>
 </body>
